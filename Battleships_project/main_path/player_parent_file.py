@@ -9,22 +9,25 @@ class Player:
         self.ocean = ['O']
         self.hit = ['X']
         self.miss = ['M']
+        self.been_hit = ["F"]
+        self.enemy_miss = ['E']
         self.board_size = board_size
         self.players_board = []
         self.players_radar = []
+        self.create_boards()
     
     def place_ships(self):
         pass 
 
     def print_player_board(self):
         board_name = 'YourGameBoard'
-        divider = "__________________"
+        divider = "____________________"
         print()
         for letter in board_name:
             print(letter, end = " ")
         print()
         for letter in divider:
-            print(letter, end = "")
+            print(letter, end = " ")
         print()
         for position in self.players_board:
             for c in position:
@@ -37,7 +40,7 @@ class Player:
 
     def print_player_radar(self):
         board_name = 'YourAirRADAR'
-        divider = "__________________"
+        divider = "____________________"
         for letter in board_name:
             print(letter, end = " ")
         print()
