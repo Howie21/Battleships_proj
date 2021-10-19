@@ -6,3 +6,4 @@ class Battleship(Ship):
         self.name = name
         self.space_size = 4
         self.identifier = ['B']
+        super.__init__()

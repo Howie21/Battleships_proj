@@ -3,15 +3,15 @@ from array import *
 
 class Player:
     def __init__(self, name, board_size):
-        self.name = name
+        self.name = name 
+        self.board_size = board_size
         self.ships = []
         self.score = 0
         self.ocean = ['O']
         self.hit = ['X']
         self.miss = ['M']
         self.been_hit = ["F"]
-        self.enemy_miss = ['E']
-        self.board_size = board_size
+        self.enemy_miss = ['E']   
         self.players_board = []
         self.players_radar = []
         self.create_boards()
@@ -78,3 +78,5 @@ class Player:
     def show_boards(self):
         self.print_player_board()
         self.print_player_radar()
+
+    

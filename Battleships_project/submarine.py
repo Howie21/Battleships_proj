@@ -6,3 +6,4 @@ class Submarine(Ship):
         self.name = name
         self.space_size = 3
         self.identifier = ['S']
+        super.__init__()

@@ -6,3 +6,4 @@ class AirCraft_Carrier(Ship):
         self.name = name
         self.space_size = 5
         self.identifier = ['A']
+        super.__init__()
