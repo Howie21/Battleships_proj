@@ -24,12 +24,13 @@ class Gameboard:
         print(f'This is what the game boards looks like!: ')
         self.test_player.show_boards()
         print('Each player is given their gameboard this is where you will see where your ships are and where the enemy has hit!\nEach player is also given a Radar Board to keep track of where they have guessed\nand missed, hit')
-        print(f" ")
+        self.legend()
 
 
     def legend(self):
         print(F'Below is the Game Legend of symbols and what they stand for!')
-
+        print(f'{self.test_player.ocean} represents the Ocean\n{self.test_player.hit} represents a Hit\n{self.test_player.been_hit} represents a space where the enemy has hit you!\n{self.test_player.miss} represents a shot fired where you missed\n{self.test_player.enemy_miss} respresents a spot which the enemy fired and missed!\n ')
+        print("'S' is for Submarine;\n'D' is for Destroyer;\n")
     def run_game(self):
         self.display_welcome()
 

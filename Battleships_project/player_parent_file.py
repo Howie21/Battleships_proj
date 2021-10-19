@@ -4,14 +4,14 @@ from array import *
 class Player:
     def __init__(self, name, board_size):
         self.name = name 
-        self.board_size = board_size
+        self.board_size = int(board_size)
         self.ships = []
         self.score = 0
-        self.ocean = ['O']
-        self.hit = ['X']
-        self.miss = ['M']
-        self.been_hit = ["F"]
-        self.enemy_miss = ['E']   
+        self.ocean = 'O'
+        self.hit = 'X'
+        self.miss = 'M'
+        self.been_hit = "F"
+        self.enemy_miss = 'E'  
         self.players_board = []
         self.players_radar = []
         self.create_boards()
@@ -31,9 +31,9 @@ class Player:
         print()
         for position in self.players_board:
             for c in position:
-                if c != '10':
+                if c != str(self.board_size):
                     print(c, end = "   ")
-                elif c == '10':
+                elif c == str(self.board_size):
                     print(c, end = "  ")
             print()
         print()
@@ -49,18 +49,18 @@ class Player:
         print()
         for position in self.players_radar:
             for c in position:
-                if c != '10':
+                if c != str(self.board_size):
                     print(c, end = "   ")
-                elif c == '10':
+                elif c == str(self.board_size):
                     print(c, end = "  ")
             print()
         print()
 
     def create_boards(self,):
         for num in range(self.board_size + 1):
-            self.players_board.append(['O'] * (self.board_size + 1))
+            self.players_board.append([self.ocean] * (self.board_size + 1))
         for num in range(self.board_size + 1):
-            self.players_radar.append(['O'] * (self.board_size + 1))
+            self.players_radar.append([self.ocean] * (self.board_size + 1))
         self.label_board(self.players_board)
         self.label_board(self.players_radar)
 
